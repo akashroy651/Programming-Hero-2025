@@ -1,0 +1,7 @@
+.header{
+    height: 500px;
+    background-image: url('MAN.jpg');
+   background-repeat: no- repeat;
+   /* background-size: cover; */
+   /* background-size: contain; */
+}
