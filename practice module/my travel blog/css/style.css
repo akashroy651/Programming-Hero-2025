@@ -1,0 +1,27 @@
+.header h1{
+    color: rgb(14, 2, 230);
+    text-align: center;
+    box-shadow: 0 2px 4px 1px;
+   font-style: italic;
+}
+marquee{
+    font-size: 30px;
+    font-style: italic;
+    box-shadow: 0 4px 8px;
+}
+  /* start navbar */
+.navbar  nav li a{
+    display: block;
+    float: left;
+    color: aqua;
+  }
+.main-img img{
+    max-width: 100%;
+  height: 500px;
+  width: 1200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ margin-top: 30px;
+}
+ 
