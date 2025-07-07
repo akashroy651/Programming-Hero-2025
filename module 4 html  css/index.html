@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+
+    <style>
+        form .basic-info label{
+            display: block;
+            margin-top: 17px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <h2>Single pitha ghor</h2>
+            <form>
+                <fieldset class="basic-info">
+                    <legend>Basic Info</legend>
+                    <label for="name">Your name</label>
+                    <input type="text" id="name">
+
+                    <label for="email">Your email</label>
+                    <input type="email" name="" id="email">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pitha Info</legend>
+
+                    <input type="radio" name="pitha" id="chitoy">
+                    <label for="chitoy">Chitoy</label>
+
+                    <input type="radio" name="pitha" id="vapa">
+                    <label for="vapa">Vapa</label>
+
+                    <input type="radio" name="pitha" id="puri">
+                    <label for="puri">Dal puri</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Vorta Info</legend>
+
+                    <input type="checkbox" name="vorta" id="alu">
+                    <label for="alu">Alu vortha</label>
+
+                    <input type="checkbox" name="vorta" id="dal">
+                    <label for="dal">Dal vortha</label>
+
+                    <input type="checkbox" name="vorta" id="shutki">
+                    <label for="shutki">Shutki </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Extra Info</legend>
+                    <textarea cols="40" rows="4" name="" id=""></textarea>
+                </fieldset>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
