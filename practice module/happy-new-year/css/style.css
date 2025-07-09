@@ -1,0 +1,49 @@
+
+.open-sans-normal {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>;  */
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+/*  fiexd  styles */
+
+.text-center{
+    text-align: center;
+}
+
+
+/* header styles */
+
+.header-text{
+    /* linear-gradient(to bottom, #070211 ,) */
+    background-image: 
+    linear-gradient(to bottom, #070211 , #07021100 ), url('../images/Banner\ Image.png');
+    height: 600px;
+    width: 1320px;
+   margin: 0 auto;
+   background-position: center;
+   background-size: cover;
+   background-repeat: n;
+
+}
+.header-text P{
+    color: white;
+    font-size: 32px;
+    font-weight: normal;
+    margin-top: 120PX;
+    margin-bottom: -32px;
+}
+.header-text h2{
+    color: white;
+    font-size: 72px;
+}
+.container{
+    position: relative;
+}
+.header-text{
+    position: absolute;
+}
