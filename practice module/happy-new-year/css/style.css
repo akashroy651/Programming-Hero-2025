@@ -21,20 +21,19 @@
 .header-text{
     /* linear-gradient(to bottom, #070211 ,) */
     background-image: 
-    linear-gradient(to bottom, #070211 , #07021100 ), url('../images/Banner\ Image.png');
+    linear-gradient(to bottom, #070211 , #07021100 ), url('../images/BannerImage.png');
     height: 600px;
     width: 1320px;
-   margin: 0 auto;
-   background-position: center;
-   background-size: cover;
-   background-repeat: n;
-
+   margin: 0 90px;
+   border-radius: 16px;
+   margin-bottom: 620px;
+   margin-top: 50px;
 }
 .header-text P{
     color: white;
     font-size: 32px;
     font-weight: normal;
-    margin-top: 120PX;
+    margin-top: 120px;
     margin-bottom: -32px;
 }
 .header-text h2{
@@ -43,7 +42,36 @@
 }
 .container{
     position: relative;
+    height: 600px;
 }
 .header-text{
     position: absolute;
+}
+
+/* section part styles */
+.section-container {
+    margin-top: 118px;
+      
+}
+
+.section-off {
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.off h1 {
+    font-size: 88px;
+    color: #FF0000;
+    font-weight: bold;
+    margin-bottom: 48px;
+}
+.off h5{
+    color: #FF0000;
+    font-size: 24px;
+    margin-bottom: -20px
+}
+.off p{
+    font-size: 48px;
+    font-weight: bold;
 }
