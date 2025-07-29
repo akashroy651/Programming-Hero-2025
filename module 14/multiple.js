@@ -15,3 +15,4 @@ if (salary > 25000 || height > 72){
 else{
     console.log('vaag tui makbul')
 }
+ 
