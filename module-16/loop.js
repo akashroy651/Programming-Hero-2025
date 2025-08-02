@@ -14,7 +14,7 @@ for(const prop in mobile){
     // console.log(mobile[prop])
 }
 
-// other vabe 
+// other vabe kora
 
 const keys = Object.keys(mobile);
 console.log(keys)
