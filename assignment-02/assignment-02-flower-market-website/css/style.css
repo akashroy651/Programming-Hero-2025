@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*  shared styles */
+
+.noto-serif {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+.font-inter{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+}
+
+.btn-primary{
+    padding: 26px 50px;
+    width: 270px;
+    background-color: #E95A08;
+    color: #FFFFFF;
+}
+#active{
+    color: #252432;
+    font-weight: bold;
+}
+.non-active{
+    color: #8987A1;
+}
+
+/* header related styles */
+nav{
+  width: 1140px; 
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    margin-left: 48px;
+     
+}
+nav li a{
+    font-size: 16px;
+    
+}
+
+/* flower plants related styles */
+
+.trusted{
+    width: 286px;
+    margin-top: -132px;
+    margin-left: -293px;
+}
+
+/* discount related styles */
+
+
+
+@media screen and (max-width: 393px) {
+   nav{
+    flex-direction: row;
+    width: 361px;
+    align-items: center;
+   }
+   nav img{
+    width: 63px;
+   }
+   #active, .non-active{
+    display: none;
+   }
+    .cart-icon {
+    font-size: 14px;
+    color: #252432;
+  }
+
+     /* flower plants  */
+     .trusted{
+        display: none;
+     }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.container-section {
+    background-color: aqua;
+    max-width: 1140px;
+    margin: 120px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.container {
+    margin-top: 162px;
+    width: 570px;
+}
+
+.hero-img {
+    margin-top: 106px;
+    width: 570px;
+ 
+}
+
+.hero-img img {
+    width: 100%;
+    height: auto;
+}
+ */
+
+
