@@ -24,3 +24,13 @@ console.log('external file');
         document.body.style.backgroundColor = 'purple'
     }
 
+
+
+     document.getElementById('btn-login')
+        .addEventListener('click', function(){
+            // console.log('login done');
+            const userInfiEl = document.getElementById('user-info')
+            userInfiEl.innerText = 'user logged in successfuly'
+        })
+
+
