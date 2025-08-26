@@ -74,5 +74,14 @@ document.getElementById('cash-out-parent').style.display = 'block'
 })
 
 
+document.getElementById('transfer-button')
+.addEventListener('click', function(){
+    document.getElementById('transfer-money-parent').
+    style.display = 'block'
+    document.getElementById('add-money-parent').style.display = 'none'
+    document.getElementById('cash-out-parent').style.display = 'none'
+
+})
+
 
 
