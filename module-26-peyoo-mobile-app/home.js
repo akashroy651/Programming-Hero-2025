@@ -63,27 +63,56 @@ document.getElementById('withdraw-btn')
 // toggling feature
 document.getElementById('add-button')
 .addEventListener('click', function(){
-document.getElementById('add-money-parent').style.display = 'block'
-document.getElementById('cash-out-parent').style.display = 'none'
-document.getElementById('transfer-money-parent').style.display = 'none'
+// document.getElementById('add-money-parent').style.display = 'block'
+// document.getElementById('cash-out-parent').style.display = 'none'
+// document.getElementById('transfer-money-parent').style.display = 'none'
+
+const forms = document.getElementsByClassName('form')
+// console.log(forms)
+
+for(form of forms){
+    form.style.display ='none'
+    // console.log(form)
+
+}
+document.getElementById("add-money-parent").
+style.display = "block"
 
 })
 document.getElementById('cash-out-button')
 .addEventListener('click', function(){
-document.getElementById('cash-out-parent').style.display = 'block'
-document.getElementById('add-money-parent').style.display = 'none'
-document.getElementById('transfer-money-parent').style.display = 'none'
+// document.getElementById('cash-out-parent').style.display = 'block'
+// document.getElementById('add-money-parent').style.display = 'none'
+// document.getElementById('transfer-money-parent').style.display = 'none'
 
+
+const forms = document.getElementsByClassName('form')
+// console.log(forms)
+for(form of forms){
+    form.style.display ='none'
+    // console.log(form)
+}
+document.getElementById("cash-out-parent").
+style.display = "block"
 
 })
 
 
 document.getElementById('transfer-button')
 .addEventListener('click', function(){
-    document.getElementById('transfer-money-parent').
-    style.display = 'block'
-    document.getElementById('add-money-parent').style.display = 'none'
-    document.getElementById('cash-out-parent').style.display = 'none'
+    // document.getElementById('transfer-money-parent').style.display = 'block'
+    // document.getElementById('add-money-parent').style.display = 'none'
+    // document.getElementById('cash-out-parent').style.display = 'none'
+
+const forms = document.getElementsByClassName('form')
+// console.log(forms)
+for(form of forms){
+    form.style.display ='none'
+    // console.log(form)
+}
+document.getElementById("transfer-money-parent").
+style.display = "block"
+
 
 })
 
