@@ -1,5 +1,20 @@
 const validPin = 1234;
 
+
+// function  to toggle
+
+function handleToggle(id){
+    const forms = document.getElementsByClassName('form')
+for(form of forms){
+    form.style.display ='none'
+}
+document.getElementById(id).
+style.display = "block"
+}
+
+
+
+
   // add money feature
 
 document.getElementById('add-money')
@@ -63,37 +78,26 @@ document.getElementById('withdraw-btn')
 // toggling feature
 document.getElementById('add-button')
 .addEventListener('click', function(){
-// document.getElementById('add-money-parent').style.display = 'block'
-// document.getElementById('cash-out-parent').style.display = 'none'
-// document.getElementById('transfer-money-parent').style.display = 'none'
 
-const forms = document.getElementsByClassName('form')
-// console.log(forms)
-
-for(form of forms){
-    form.style.display ='none'
-    // console.log(form)
-
-}
-document.getElementById("add-money-parent").
-style.display = "block"
+handleToggle('add-money-parent')
 
 })
+
 document.getElementById('cash-out-button')
 .addEventListener('click', function(){
 // document.getElementById('cash-out-parent').style.display = 'block'
 // document.getElementById('add-money-parent').style.display = 'none'
 // document.getElementById('transfer-money-parent').style.display = 'none'
+// const forms = document.getElementsByClassName('form')
+// // console.log(forms)
+// for(form of forms){
+//     form.style.display ='none'
+//     // console.log(form)
+// }
+// document.getElementById("cash-out-parent").
+// style.display = "block"
+handleToggle('cash-out-parent')
 
-
-const forms = document.getElementsByClassName('form')
-// console.log(forms)
-for(form of forms){
-    form.style.display ='none'
-    // console.log(form)
-}
-document.getElementById("cash-out-parent").
-style.display = "block"
 
 })
 
@@ -104,15 +108,24 @@ document.getElementById('transfer-button')
     // document.getElementById('add-money-parent').style.display = 'none'
     // document.getElementById('cash-out-parent').style.display = 'none'
 
-const forms = document.getElementsByClassName('form')
-// console.log(forms)
-for(form of forms){
-    form.style.display ='none'
-    // console.log(form)
-}
-document.getElementById("transfer-money-parent").
-style.display = "block"
+// const forms = document.getElementsByClassName('form')
+// // console.log(forms)
+// for(form of forms){
+//     form.style.display ='none'
+//     // console.log(form)
+// }
+// document.getElementById("transfer-money-parent").
+// style.display = "block"
 
+handleToggle('transfer-money-parent')
+
+})
+
+
+document.getElementById('bonus-button')
+.addEventListener('click', function(){
+
+handleToggle('get-bonus-parent')
 
 })
 
