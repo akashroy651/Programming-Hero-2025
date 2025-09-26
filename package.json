@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/akashroy651/Programming-Hero-2025/issues"
   },
-  "homepage": "https://github.com/akashroy651/Programming-Hero-2025#readme"
+  "homepage": "https://github.com/akashroy651/Programming-Hero-2025#readme",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
 }
