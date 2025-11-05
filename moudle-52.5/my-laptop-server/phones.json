@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 15 Pro",
+    "price": 1299,
+    "description": "Apple A17 Pro chip সহ শক্তিশালী পারফরম্যান্স, ProMotion display এবং 48MP Triple Camera setup।",
+    "image": "https://images.pexels.com/photos/18104/pexels-photo.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S24 Ultra",
+    "price": 1199,
+    "description": "6.8-inch Dynamic AMOLED display, Snapdragon 8 Gen chipset এবং 200MP quad camera system।",
+    "image": "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Google Pixel 8 Pro",
+    "price": 999,
+    "description": "Google Tensor G3, AI-powered camera, Night Sight & Astro Photography mode সাপোর্ট করে।",
+    "image": "https://images.pexels.com/photos/6078125/pexels-photo-6078125.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "OnePlus 12",
+    "price": 849,
+    "description": "120Hz AMOLED display, Snapdragon flagship processor এবং Hasselblad টিউনড ক্যামেরা।",
+    "image": "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Xiaomi 14 Pro",
+    "price": 799,
+    "description": "Leica camera optics, flagship Snapdragon processor, এবং 120W fast charging।",
+    "image": "https://images.pexels.com/photos/116364/pexels-photo-116364.jpeg"
+  }
+]
