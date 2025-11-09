@@ -3,14 +3,64 @@ const cors = require("cors");
 // .env ar jonno
 require('dotenv').config()
 // console.log(process.env)
-
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const app = express();
 const port = process.env.PORT || 3000;
 
+// vul token jeno access na tar jonno
+
+const admin = require("firebase-admin");
+
+const serviceAccount = require("./smart-deals-firebase-adminsdk.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+
+
+
+
+
 // middleware
 app.use(cors());
 app.use(express.json());
+
+// atao middleware but jwt middleware
+const logger = (req,res,next) =>{
+    console.log('logging information');
+    next()
+}
+//  end jwt middleware
+
+//  firebase middleware token
+const verifyFireBaseToken = async (req, res, next) => {
+    console.log('in the verify middleware', req.headers.authorization)
+    if(!req.headers.authorization){
+        // do nor allow to go
+        return res.status(401).send({ message: 'unauthorized access'})
+    }
+    const token = req.headers.authorization.split(' ')[1];
+    if(!token) {
+        return res.status(401).send({ message: 'unauthorized a access'})
+    }
+        // verify token
+    try{
+     const userinfo = await admin.auth().verifyIdToken(token);
+     req.token_email=userinfo.email;
+     console.log('after token validation', userinfo)
+        next();
+    }
+    catch{
+      console.log("invallid token")
+        return res.status(401).send({ message: 'unauthorized a access'})
+
+    }
+        
+    // verify id token
+  
+}
+
 
 // smartdbUser
 // owCWvbeMh1L5bMZL
@@ -119,11 +169,16 @@ async function run() {
     });
 
     // bids related api
-    app.get("/bids", async (req, res) => {
-
+    app.get("/bids", logger, verifyFireBaseToken, async (req, res) => {
+        //  jwt  start
+        // console.log('header', req.headers)
+        // end jwt
         const email =req.query.email;
         const query = {};
         if(email){
+          if(email !== req.token_email){
+            return res.status(403).send({message: 'forbidden access'})
+          }
             query.buyer_email = email;
         }
       const cursor = bidsCollection.find(query);
@@ -132,7 +187,7 @@ async function run() {
     });
 
 
-     app.get('/products/bids/:productId', async (req, res) => {
+     app.get('/products/bids/:productId', verifyFireBaseToken, async (req, res) => {
        const productId = req.params.productId;
         const query = {product: productId}
         const cursor = bidsCollection.find(query).sort({bid_price: -1})
@@ -142,17 +197,17 @@ async function run() {
     }) 
 
 
-    app.get('/bids', async (req, res) => {
+    // app.get('/bids', async (req, res) => {
 
-        const query = {};
-        if(query.email){
-            query.buyer_email= email;
-        }
+    //     const query = {};
+    //     if(query.email){
+    //         query.buyer_email= email;
+    //     }
 
-        const cursor =bidsCollection.find(query);
-        const result = await cursor.toArray();
-        res.send(result);
-    })
+    //     const cursor =bidsCollection.find(query);
+    //     const result = await cursor.toArray();
+    //     res.send(result);
+    // })
 
 
 
