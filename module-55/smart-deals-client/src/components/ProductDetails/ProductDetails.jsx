@@ -11,7 +11,7 @@ const ProductDetails = () => {
   //   console.log(product);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/products/bids/${productId}`, {
+    fetch(`http://localhost:5000/products/bids/${productId}`, {
         headers: {
             authorization: `Bearer ${user.accessToken}`
         }
@@ -42,7 +42,7 @@ const ProductDetails = () => {
       status: "pending",
     };
 
-    fetch("http://localhost:3000/bids", {
+    fetch("http://localhost:5000/bids", {
       method: "POST",
       headers: {
         "content-type": "application/json",

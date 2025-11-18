@@ -10,7 +10,7 @@ const MyBids = () => {
 
   useEffect(() => {
     if (user?.email)
-      fetch(`http://localhost:3000/bids?email=${user.email}`, {
+      fetch(`http://localhost:5000/bids?email=${user.email}`, {
     // jwt start
         headers: {
             authorization: `Bearer ${user.accessToken}`
@@ -36,7 +36,7 @@ const MyBids = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/bids/${_id}`, {
+        fetch(`http://localhost:5000/bids/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

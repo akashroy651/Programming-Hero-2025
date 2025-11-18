@@ -5,7 +5,7 @@ require('dotenv').config()
 // console.log(process.env)
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 // vul token jeno access na tar jonno
 
@@ -74,17 +74,24 @@ const client = new MongoClient(uri, {
     strict: true,
     deprecationErrors: true,
   },
+
 });
 
-async function run() {
-  try {
-    await client.connect();
+
+// async function run() {
+
+//   try {
+//     await client.connect();
 
     const db = client.db("smart_db");
     const productsCollection = db.collection("products");
     const bidsCollection = db.collection("bids");
     const usersCollection = db.collection("users")
+    // console.log('')
+app.get('/test', (req, res) => {
 
+  res.send('hello')
+})
 //  users api
     app.post('/users', async (req, res) => {
         const newUser = req.body;
@@ -106,7 +113,7 @@ async function run() {
 
     // product api
     // all find ar jonno
-    app.get("/products/", async (req, res) => {
+    app.get("/products", async (req, res) => {
       // const cursor = productsCollection.find().sort({price_min: -1}).limit(2);
 
       console.log(req.query);
@@ -226,14 +233,14 @@ async function run() {
     })
 
 
-    await client.db("admin").command({ ping: 1 });
-    console.log(
-      "Pinged your deployment. You successfully connected to MongoDB!"
-    );
-  } finally {
-  }
-}
-run().catch(console.dir);
+//     await client.db("admin").command({ ping: 1 });
+//     console.log(
+//       "Pinged your deployment. You successfully connected to MongoDB!"
+//     );
+//   } finally {
+//   }
+// }
+// run().catch(console.dir);
 
 app.get("/", (req, res) => {
   res.send("Smart server is running");
