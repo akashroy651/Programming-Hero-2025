@@ -34,8 +34,7 @@ const Brands = () => {
           delay: 1000,
           disableOnInteraction: false,
         }}
-         modules={[Autoplay]}
-       
+        modules={[Autoplay]}
       >
         {brandLogos.map((logo, index) => (
           <SwiperSlide key={index}>
