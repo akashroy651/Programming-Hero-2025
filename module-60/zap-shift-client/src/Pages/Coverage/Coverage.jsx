@@ -28,12 +28,16 @@ const Coverage = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
 
-        <Marker position={position}>
-                <Popup>
-                     A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
+                {
+                    serviceCenters.map((center,index) =>  <Marker 
+                    key={index}
+                    position={[center.latitude, center.longitude]}>
+                    <Popup>
+                            <strong>{center.district} </strong>  <br /> Service Area: {center.covered_area.join(',')}
+                    </Popup>
 
-        </Marker>
+                   </Marker>)
+                }
 
         </MapContainer>
       </div>
