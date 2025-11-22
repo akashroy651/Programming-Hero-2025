@@ -1,19 +1,24 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import useAuth from "../../../hooks/useAuth";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
 
 const {register, handleSubmit, formState: {errors}} = useForm();
 const {signInUser} = useAuth();
+// login ar por sei location pathabe
+const location = useLocation();
+const navigate = useNavigate();
+    // console.log('in the login page', location)
 
 const handleLogin = (data) => {
     console.log('data', data)
     signInUser(data.email, data.password)
     .then(result => {
         console.log(result.user)
+        navigate(location?.state || '/')
     })
     .catch(error => {
         console.log('error',error.message)
@@ -49,6 +54,7 @@ const handleLogin = (data) => {
           <button className="btn btn-neutral mt-4">Login</button>
         </fieldset>
         <p>New to zap shift <Link 
+        state={location.state}
         className="text-blue-400 underline" to="/register">Register</Link></p>
       </form>
       <SocialLogin></SocialLogin>

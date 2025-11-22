@@ -49,7 +49,10 @@ const handleLogOut = () => {
 
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl"><Logo></Logo></a>
+          {/* <a className="btn btn-ghost text-xl"><Logo></Logo></a> */}
+            <div className="btn btn-ghost text-xl">
+            <Logo />
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -65,7 +68,7 @@ const handleLogOut = () => {
                  <Link className="btn" to='/login'>Login</Link>
               }
                <Link className="btn btn-primary text-black mx-2" 
-               to='/brARider'>Be a Rider</Link>
+               to='/rider'>Be a Rider</Link>
         </div>
       </div>
     </div>
