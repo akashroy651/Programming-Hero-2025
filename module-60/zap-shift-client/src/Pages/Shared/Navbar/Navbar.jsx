@@ -15,6 +15,7 @@ const handleLogOut = () => {
     const links = <>
      <li><NavLink to="">Services</NavLink></li>
      <li><NavLink to="">About Us</NavLink></li>
+     <li><NavLink to="/send-parcel">Send Parcel</NavLink></li>
      <li><NavLink to="/Coverage">Coverage</NavLink></li>
             
     
